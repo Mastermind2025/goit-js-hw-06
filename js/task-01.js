@@ -1,18 +1,22 @@
- const categories = document.querySelectorAll('.item');
-        console.log(' ');
-        console.log(`Number of categories: ${categories.length}`);
-        console.log(' ');
-        categories.forEach(category => {
-          const group = [...category.children];
-          group.forEach(element => {
-            if (element.tagName === 'H2') {
-              console.log(`Elements: ${element.textContent}`);
-            }
-          });
-          group.forEach(element => {
-            if (element.tagName === 'UL') {
-              console.log(`Elements: ${element.children.length}`);
-            }
-          });
-          console.log(' ');
-        });
+const elemTiy = document.querySelector('#categories');
+console.log('');
+console.log('Number of categories:', elemTiy.children.length);
+
+// console.log(elemTiy.children.length);
+
+const elemMisc = document.querySelectorAll('.item');
+// const elemMisc = elemTiy.querySelectorAll('li');
+
+// console.log(elemMisc);
+// const allAm = elemMisc.firstElementChild;
+// console.log(allAm);
+// const mum = elemMisc.lastElementChild.children.length;
+// console.log(num);
+
+elemMisc.forEach(elem => {
+    console.log('');
+   
+    console.log('Category:' + ' ' + elem.firstElementChild.textContent);
+    console.log('Elements:' + ' ' + elem.lastElementChild.children.length);
+});
+// console.log(elemMisc.firstElementChild.textContent);

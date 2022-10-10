@@ -2,7 +2,7 @@ const ellInput = document.querySelector('#font-size-control');
 const ellSpanText = document.querySelector('#text');
 
 
-ellInput.addEventListener('change', (elem) => {
+ellInput.addEventListener('input', (elem) => {
     // console.log(ellSpanText.style.fontSize);
     ellSpanText.style.fontSize = elem.target.value+'px';
 })

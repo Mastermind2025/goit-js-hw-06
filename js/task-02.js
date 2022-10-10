@@ -7,9 +7,8 @@ const ingredients = [
   'Condiments',
 ];
 
-const navEl = document.createElement('ul');
-navEl.classList.add('site-nav');
-// console.log(navEl);
+const elemIngredients = document.querySelector('#ingredients');
+
 
 const newBlock = ingredients.map((itm, num) => {
   const navItEl = document.createElement('li');
@@ -19,6 +18,6 @@ navItEl.classList.add('item');
 return navItEl;
 });
 
-navEl.append(...newBlock);
-console.log(navEl);
+elemIngredients.append(...newBlock);
+
 
